@@ -18,7 +18,7 @@ $(window).load(function(){
   axios.get(apiUrl).then(alertWeather);
 }
 
-function alertWeather(response) {
+,function alertWeather(response) {
   window.onload=function(){
 let form = document.querySelector("form");
 
