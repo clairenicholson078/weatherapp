@@ -1,4 +1,4 @@
-import axios from "axios";
+//import axios from "axios";
 let apiKey = "01daaf85b5f99f10a866101e96d3478e";
 function currentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
