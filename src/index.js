@@ -3,8 +3,10 @@ let apiKey = "01daaf85b5f99f10a866101e96d3478e";
 function currentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-let button = document.querySelector("#chooseCurrentLocation");
-  button.addEventListener("click", currentPosition);
+
+$(window).load(function(){let button = document.querySelector("#chooseCurrentLocation");
+  button.addEventListener("click", currentPosition); }
+
 
 
 function showPosition(position) {
