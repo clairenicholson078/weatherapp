@@ -63,7 +63,7 @@ form.addEventListener("submit", submitCity);
   enterCity(`${inputCity.value}`);
 }
 //Default City
-,enterCity("London"),;
+,enterCity("London");
 
 ,function enterCity(city) {
   //event.preventDefault();
