@@ -15,8 +15,9 @@ function showPosition(position) {
 
 window.onload=function(){
 let button = document.querySelector("#chooseCurrentLocation");
+  button.addEventListener("click", currentPosition);
+
 }
-button.addEventListener("click", currentPosition);
 
 console.log(button);
 
