@@ -4,10 +4,10 @@ function currentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-$(window).load(function(){let button = document.querySelector("#chooseCurrentLocation");
-  button.addEventListener("click", currentPosition); }
-
-
+$(window).load(function(){
+  let button = document.querySelector("#chooseCurrentLocation");
+  button.addEventListener("click", currentPosition);
+}
 
 function showPosition(position) {
   console.log(position.coords.latitude);
