@@ -20,6 +20,13 @@ let button = document.querySelector("#chooseCurrentLocation");
 }
 
 function alertWeather(response) {
+  window.onload=function(){
+let form = document.querySelector("form");
+
+form.addEventListener("submit", submitCity);
+
+}
+  
   let temperature = Math.round(response.data.main.temp);
 
   let currentCondition = document.querySelector("#mainextradetails");
@@ -43,13 +50,6 @@ function alertWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  
-window.onload=function(){
-let form = document.querySelector("form");
-
-form.addEventListener("submit", submitCity);
-
-}
 }
 
 function submitCity(event) {
