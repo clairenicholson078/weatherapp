@@ -19,8 +19,6 @@ let button = document.querySelector("#chooseCurrentLocation");
 
 }
 
-console.log(button);
-
 function alertWeather(response) {
   let temperature = Math.round(response.data.main.temp);
 
