@@ -62,8 +62,6 @@ form.addEventListener("submit", submitCity);
   searchCity.innerHTML = `${inputCity.value}`;
   enterCity(`${inputCity.value}`);
 }
-//Default City
-enterCity("London");
 
 ,function enterCity(city) {
   //event.preventDefault();
@@ -72,3 +70,6 @@ enterCity("London");
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
   axios.get(apiUrl).then(alertWeather);
 }
+               
+//Default City
+enterCity("London");
