@@ -1,4 +1,4 @@
-//import axios from "axios";
+import axios from "axios";
 let apiKey = "01daaf85b5f99f10a866101e96d3478e";
 function currentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -13,7 +13,9 @@ function showPosition(position) {
   axios.get(apiUrl).then(alertWeather);
 }
 
+window.onload=function(){
 let button = document.querySelector("#chooseCurrentLocation");
+}
 button.addEventListener("click", currentPosition);
 
 console.log(button);
