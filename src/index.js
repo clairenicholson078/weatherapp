@@ -50,6 +50,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", submitCity);
 
 }
+}
 
 function submitCity(event) {
   event.preventDefault();
