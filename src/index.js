@@ -72,3 +72,4 @@ form.addEventListener("submit", submitCity);
   axios.get(apiUrl).then(alertWeather);
 }
 ,
+//end of code// 
