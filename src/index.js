@@ -52,6 +52,15 @@ form.addEventListener("submit", submitCity);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+               
+,function enterCity(city) {
+  //event.preventDefault();
+  let apiKey = "5562088dc6a08cb31f02b4a3aba8768d";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+  axios.get(apiUrl).then(alertWeather);
+}
+               
 ,function submitCity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#yourcity");
@@ -64,12 +73,4 @@ form.addEventListener("submit", submitCity);
   enterCity(`${inputCity.value}`);
 }
 
-,function enterCity(city) {
-  //event.preventDefault();
-  let apiKey = "5562088dc6a08cb31f02b4a3aba8768d";
-  let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(alertWeather);
-}
-,
 //end of code// 
