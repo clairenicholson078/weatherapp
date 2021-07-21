@@ -74,3 +74,4 @@ form.addEventListener("submit", submitCity);
 }
 
 //end of code// 
+,
