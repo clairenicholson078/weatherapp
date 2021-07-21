@@ -4,13 +4,7 @@ function currentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-$(window).load(function(){
-  let button = document.querySelector("#chooseCurrentLocation");
-  button.addEventListener("click", currentPosition);
-  enterCity("London");
-}
-
-,function showPosition(position) {
+function showPosition(position) {
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);
   let Latitude = position.coords.latitude;
@@ -19,14 +13,12 @@ $(window).load(function(){
   axios.get(apiUrl).then(alertWeather);
 }
 
-,function alertWeather(response) {
-  window.onload=function(){
-let form = document.querySelector("form");
+let button = document.querySelector("#chooseCurrentLocation");
+button.addEventListener("click", currentPosition);
 
-form.addEventListener("submit", submitCity);
+console.log(button);
 
-}
-  
+function alertWeather(response) {
   let temperature = Math.round(response.data.main.temp);
 
   let currentCondition = document.querySelector("#mainextradetails");
@@ -52,16 +44,11 @@ form.addEventListener("submit", submitCity);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-               
-,function enterCity(city) {
-  //event.preventDefault();
-  let apiKey = "5562088dc6a08cb31f02b4a3aba8768d";
-  let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(alertWeather);
-}
-               
-,function submitCity(event) {
+let form = document.querySelector("form");
+
+form.addEventListener("submit", submitCity);
+
+function submitCity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#yourcity");
   //console.log(inputCity.value);
@@ -72,7 +59,13 @@ form.addEventListener("submit", submitCity);
   searchCity.innerHTML = `${inputCity.value}`;
   enterCity(`${inputCity.value}`);
 }
+//Default City
+enterCity("London");
 
-//end of code// 
-,
+function enterCity(city) {
+  //event.preventDefault();
+  let apiKey = "5562088dc6a08cb31f02b4a3aba8768d";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+  axios.get(apiUrl).then(alertWeather);
 }
