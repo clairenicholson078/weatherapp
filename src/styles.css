@@ -1,0 +1,124 @@
+.col.col-lg-2 {
+  min-width: 80%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ededed;
+}
+.col {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ededed;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 0 auto;
+}
+
+.weatherheader {
+  margin-top: 2%;
+  background-image: url("images/kidv2.png");
+  background-size: contain;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-color: #ededed;
+  text-align: right;
+}
+
+.currentweather {
+  margin-top: 2%;
+}
+.day {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  font-family: "Montserrat", sans-serif;
+  color: #df916b;
+  text-decoration: none;
+}
+a:hover {
+  font-family: "Montserrat", sans-serif;
+  color: #ededed;
+  text-decoration: none;
+}
+
+.col .day {
+  background-color: #ededed;
+  margin: 10px;
+}
+.headeritems {
+  margin: 10%;
+  color: #333;
+}
+hr {
+  width: 10%;
+  color: #df916b;
+}
+form {
+  background-color: #d9d9d9;
+  padding: 20px;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+}
+button#chooseCurrentLocation {
+  background-color: #fff;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  margin-top: 20px;
+  display: block;
+}
+button#chooseCurrentLocation :hover {
+  background-color: #d9d9d9;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  display: block;
+}
+
+span#mainextradetails {
+  font-size: 16px;
+}
+
+h1 {
+  background-color: #d9d9d9;
+  padding: 20px;
+  width: fit-content;
+  font-family: "Assistant", sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  background-color: #d9d9d9;
+  padding: 20px;
+  width: fit-content;
+  font-size: 25px;
+  font-weight: 100px;
+  font-family: "Assistant", sans-serif;
+}
+ul {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.temp {
+  font-weight: 600px;
+  font-size: 30px;
+  text-align: center;
+}
+h3 {
+  font-size: 20px;
+  font-family: "Assistant", sans-serif;
+}
+.favlocations {
+  margin: 5%;
+  font-family: "Montserrat", sans-serif;
+}
+.currently {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
