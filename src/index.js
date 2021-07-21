@@ -7,6 +7,7 @@ function currentPosition() {
 $(window).load(function(){
   let button = document.querySelector("#chooseCurrentLocation");
   button.addEventListener("click", currentPosition);
+  enterCity("London");
 }
 
 ,function showPosition(position) {
@@ -71,5 +72,4 @@ form.addEventListener("submit", submitCity);
   axios.get(apiUrl).then(alertWeather);
 }
                
-//Default City
-enterCity("London");
+
