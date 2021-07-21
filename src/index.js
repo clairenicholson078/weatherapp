@@ -11,12 +11,12 @@ function showPosition(position) {
   let Longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather/?lat=${Latitude}&lon=${Longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(alertWeather);
-}
 
 window.onload=function(){
 let button = document.querySelector("#chooseCurrentLocation");
   button.addEventListener("click", currentPosition);
 
+}
 }
 
 function alertWeather(response) {
