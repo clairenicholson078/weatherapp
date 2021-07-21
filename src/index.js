@@ -51,7 +51,7 @@ form.addEventListener("submit", submitCity);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function submitCity(event) {
+,function submitCity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#yourcity");
   //console.log(inputCity.value);
@@ -65,7 +65,7 @@ function submitCity(event) {
 //Default City
 enterCity("London");
 
-function enterCity(city) {
+,function enterCity(city) {
   //event.preventDefault();
   let apiKey = "5562088dc6a08cb31f02b4a3aba8768d";
   let unit = "metric";
