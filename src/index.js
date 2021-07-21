@@ -44,10 +44,12 @@ function alertWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
+window.onload=function(){
 let form = document.querySelector("form");
 
 form.addEventListener("submit", submitCity);
+
+}
 
 function submitCity(event) {
   event.preventDefault();
