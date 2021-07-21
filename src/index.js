@@ -9,7 +9,7 @@ $(window).load(function(){
   button.addEventListener("click", currentPosition);
 }
 
-function showPosition(position) {
+,function showPosition(position) {
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);
   let Latitude = position.coords.latitude;
