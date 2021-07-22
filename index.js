@@ -94,8 +94,8 @@ function getForecast(coordinates) {
 let apiKey = "01daaf85b5f99f10a866101e96d3478e";
 let Latitude1 = position.coords.latitude;
 let Longitude1 = position.coords.longitude;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather/?lat=${Latitude1}&lon=${Longitude1}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayForecast);
+let apiUrl2 = `https://api.openweathermap.org/data/2.5/weather/?lat=${Latitude1}&lon=${Longitude1}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl2).then(displayForecast);
 }
 
 function alertWeather(response) {
@@ -130,8 +130,6 @@ function alertWeather(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   getForecast(response.data.coord);
 
-
-
 }
 
 let form = document.querySelector("form");
@@ -154,8 +152,8 @@ enterCity("London");
 
 function enterCity(city) {
   //event.preventDefault();
-  let apiKey = "01daaf85b5f99f10a866101e96d3478e";
-  let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(alertWeather);
+  let apiKey1 = "01daaf85b5f99f10a866101e96d3478e";
+  let units = "metric";
+  let apiUrl1 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey1}`;
+  axios.get(apiUrl1).then(alertWeather);
 }
