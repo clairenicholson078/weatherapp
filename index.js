@@ -76,6 +76,10 @@ console.log(button);
 
 function alertWeather(response) {
   let temperature = Math.round(response.data.main.temp);
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+
 
   let currentCondition = document.querySelector("#mainextradetails");
   console.log(response.data.weather[0].main);
@@ -83,6 +87,10 @@ function alertWeather(response) {
   console.log(response.data.weather.icon);
   let weather = document.querySelector("#currentlytemp");
   weather.innerHTML = `${temperature}°C`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
 
   //let currentTemp = (response.data.main.temp);
   //let currentTempRound = Math.round(currentTemp);
