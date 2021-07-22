@@ -29,7 +29,7 @@ function formatDate(timestamp) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#container");
+  let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
 
