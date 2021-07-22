@@ -76,22 +76,13 @@ console.log(button);
 
 function alertWeather(response) {
   let temperature = Math.round(response.data.main.temp);
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#date");
-
-
   let currentCondition = document.querySelector("#mainextradetails");
   console.log(response.data.weather[0].main);
   currentCondition.innerHTML = response.data.weather[0].main;
   console.log(response.data.weather.icon);
   let weather = document.querySelector("#currentlytemp");
   weather.innerHTML = `${temperature}°C`;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
-
-
+  
   //let currentTemp = (response.data.main.temp);
   //let currentTempRound = Math.round(currentTemp);
   //alert("The temperature is currently "+ currentTempRound + "°C");
@@ -106,6 +97,15 @@ function alertWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+
 }
 
 let form = document.querySelector("form");
